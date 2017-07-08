@@ -1,26 +1,26 @@
 {
-  "name": "sassy-starter",
-  "title": "Sassy Starter",
-  "description": "A starter toolkit based on Scalable and Modular Architecture for CSS (SMACSS) for Sass (SCSS) projects",
+  "name": "graphy",
+  "title": "Graphy",
+  "description": "Open Source project for drawing Graph with HTML5/CSS3/JS",
   "author": {
-    "name": "Mina Markham",
-    "url": "https://github.com/minamarkham"
+    "name": "Hiro Wakatsuki",
+    "url": "https://github.com/wktq"
   },
-  "version": "2.1.0",
+  "version": "0.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/minamarkham/sassy-starter.git"
+    "url": "git://github.com/wktq/graphy.git"
   },
   "homepage": "https://minamarkham.github.io/sassy-starter/",
   "keywords": [
-    "sass",
-    "scss",
-    "doc",
-    "boilerplate",
-    "starter",
-    "gulp",
-    "smacss"
+    "graph",
+    "chart",
+    "HTML5",
+    "CSS3",
+    "clean",
+    "modern",
+    "Open Source"
   ],
   "bugs": {
     "url": "https://github.com/minamarkham/sassy-starter/issues"

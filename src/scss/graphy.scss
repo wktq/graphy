@@ -1,0 +1,79 @@
+.graphy {
+  position: relative;
+  padding: 2%;
+  padding-top: 5%;
+  font-size: 0;
+
+  .graphy-title {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: #757575;
+    letter-spacing: .05rem;
+  }
+
+  .graphy-division {
+    width: 15%;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .graphy-inner {
+    width: 85%;
+    height: 100%;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+
+    .graphy-inner-grid {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      .graphy-inner-grid-vertical {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+
+        &:after {
+          content: attr(data-unit);
+          position: absolute;
+          left: -40px;
+          transform: translate(-50%, 100%);
+          color: #aaa;
+        }
+      }
+    }
+  }
+
+  .graphy-elem--bar {
+    min-width: 20px;
+    height: 0;
+    background-color: #F44336;
+    position: absolute;
+    bottom: 0;
+
+
+  }
+
+  .graphy-elem--bar::before {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #757575;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  &.loaded {
+    .graphy-elem--bar {
+      max-height: 100%;
+      min-height: 1px;
+    }
+  }
+}

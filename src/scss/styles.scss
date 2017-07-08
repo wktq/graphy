@@ -1,85 +1,53 @@
 @charset 'utf-8';
-
-// ==========================================================================
-// Sassy Starter by Mina Markham
-// A SMACSS-based starter toolkit for SCSS projects
-//
-// The toolkit uses recommendations from Scalable and Modular Architecture for CSS (SMACSS)
-// @link http://smacss.com/book
-//
-// Site:    https://minamarkham.github.io/sassy-starter
-// Author:  Mina Markham
-// Email:   mina@mina.codes
-// Date:    10/25/15
-// ==========================================================================
-
-// CSS Debugging
-//
-// Toggle layout debugging with CSS Pesticide.
-//
-// $pesticide-debug-outline - {boolean} adds outlines to all elements.
-// $pesticide-debug-depth - {boolean} adds shadows to all elements.
-// @source - http://pesticide.io/
-
 $pesticide-debug-outline: false;
 $pesticide-debug-depth: false;
 
-// ==========================================================================
-// $Libs
-// ==========================================================================
-@import 'libs/index';
+@import 'base';
+@import 'custom';
+@import 'graphy';
 
-// ==========================================================================
-// $Utilities
-// ==========================================================================
-@import 'utilities/index';
+.cover {
+  background-color: #80CBC4;
+  height: 100vh;
+  width: 100%;
+  position: relative;
 
-// ==========================================================================
-// $Base
-// ==========================================================================
-@import 'base/index';
+  .cover-title {
+    font-size: 80px;
+    font-weight: lighter;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    letter-spacing: 0.2vw;
+    animation: cover-title 1.5s;
+    text-shadow: 0px 0px 40px rgba(0,0,0,.2), 1px 1px 4px rgba(0,0,0,.3);
+    font-family: 'Fredoka One';
+    color: #fff;
+  }
+}
 
-// ==========================================================================
-// $Layout
-// ==========================================================================
-@import 'layout/index';
+@keyframes cover-title {
+  0% {
+    left: 0%;
+    text-shadow: 0px 0px 400px rgba(0,0,0,.2), 1px 1px 40px rgba(0,0,0,.3);
+    color: #2196F3;
+    opacity: 0;
+  }
 
-// ==========================================================================
-// $Atoms
-// ==========================================================================
-@import 'atoms/index';
+  30% {
+    color: #2196F3;
+    opacity: 0;
+    left: 0%;
+  }
 
-// ==========================================================================
-// $Molecules
-// ==========================================================================
-@import 'molecules/index';
+  70% {
+    opacity: 1;
+    color: #E91E63;
+  }
 
-// ==========================================================================
-// $Organisms
-// ==========================================================================
-@import 'organisms/index';
-
-// ==========================================================================
-// $States
-// ==========================================================================
-@import 'states/index';
-
-// ==========================================================================
-// $Overrides
-// ==========================================================================
-@import 'overrides/index';
-
-// ==========================================================================
-// $Print
-// ==========================================================================
-@import 'states/print';
-
-// ==========================================================================
-// $Fonts
-// ==========================================================================
-@import 'utilities/fonts';
-
-// ==========================================================================
-// $Shame
-// ==========================================================================
-@import 'shame';
+  100% {
+    letter-spacing: 0.2vw;
+  }
+}
